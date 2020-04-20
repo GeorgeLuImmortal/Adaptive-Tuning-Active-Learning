@@ -25,7 +25,7 @@ The first step of the system is converting raw text data into vectorized format,
 
 	python encoding_text.py 0 1 2 3 4 -i ProtonPumpInhibitors
 
-The numbers specify the representation techniques used, 0-tf, 1-tfidf, 2-word2vec, 3-glove, 4-fasttext. -i specify the folder you save the raw input data.
+The numbers specify the representation techniques used, ## 0-tf, 1-tfidf, 2-word2vec, 3-glove, 4-fasttext.## -i specify the folder you save the raw input data.
 It should be noted that you must specify at least one k, or you can input a list of k (*5 10 15 20 25 30*) as shown in above command. There are some other opitons you can specify such as output directory (default is directory "LDA_MODELS/"), random seed (default is 1984) and so on, as shown below
 	
 	python build_lda_model.py --random_state=2020 5 10 20 40 80 160 200
