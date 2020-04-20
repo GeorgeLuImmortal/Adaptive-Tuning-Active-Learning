@@ -32,45 +32,8 @@ If you want to convert text into embeddings by transformer-based model:
 	
 The numbers specify the representation techniques used, 0-bert, 1-gpt2, 2-xlnet, 3-distilbert, 4-albert, 5-roberta and -i specify the folder you save the raw input data.
 
-##### Step 2: Train Fasttext word embedding model
+##### Step 2: Active Learning
 
-After generating LDA models, the next step of TBCC is to build up a word embedding model for LDA model selection procedure. 
+We can start active learning procedure by:
 
-	python build_fasttext_model.py
-	
-The word embedding model will be stored in directory "FASTTEXT_MODEL/" by default, you can also play with other parameters. By command 
-*python build_fasttext_model.py -h* you can see other options such as window size, dimensions.
-
-##### Step 3: Analysis of topic coherence of topic models
-
-The third step is caculating the topic coherence of each topic model for selecting the model with highest topic coherece.
-	
-	python compute_semantic_coherence.py 5 10 20 40 80 160 200
-	
-The result will be stored in the directory "SEMANTIC_COH/". It should be noted the if you change the random seed when training LDA models (default random seed is 1984), you need to specify it explicitly, since the LDA models are named after random seed and topic numbers.
-
-	python compute_semantic_coherence.py --random-state=2020 5 10 20 40 80 160 200
-
-##### Step 4: Conduct topic-based corpus comparison
-
-After choosing the best k, we can conduct a topic-based corpus comparison according to various statistical discrimination metrics.
-
-	python topic_based_cc.py -k 200 -s 1984 -m jsd
-	
-It should be noted the parameters *k, s, m* is mandatory here indicating the number of topics, random_state (these two for targeting the topic model) and the employed statistical discrimination metrics (options are jsd, ext_jsd, chi, rf, ig, gr). The output will be stored in directory "COMPARISON_RESULT/" as well as shown in the console:
-
-
-![alt text](https://github.com/GeorgeLuImmortal/topic-based_corpus_comparison/blob/master/COMPARISON_RESULT/comparison_result.png)
-
-
-The first column is the index of topic, the second colmun is the words for charactering the topic, and the third colmun is the corpus index which the topic belongs to.
-
-##### Step 5: Visualization
-
-We can also visualizae the result via scatter plot exploiting t-SNE to project documents into a 2-D plane. The parameters are the same as above for example, k is the number of topic, s is the random state and m means the metric applied.
-
-	python visualization.py -k 200 -s 1984 -m jsd
-
-![alt text](https://github.com/GeorgeLuImmortal/topic-based_corpus_comparison/blob/master/VISUALIZATION/scatter_plot.png)
-
-It will generate a html file under the directory "VISUALIZATION/" by default, you can open the file using any browser. The different color indicates documents from different corpora and the number is the index of the most discriminative topics selected by TBCC. You can refer to the file in directory "COMPARISON_RESULT/" for the contents of topics, or you can use mouth hover through the html page for the discriptors of the topics as shown in the above figure (this is a result of Chi-square, 200 topics).
+	ACC_PRE_YIELD_BURDEN_active_learning.py 0 1 2 3 4 5 -t bert -m 1000 -r 10 -n ProtonPumpInhibitors_neg.csv -p ProtonPumpInhibitors_pos.csv
