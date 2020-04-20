@@ -12,18 +12,20 @@ Tested Python 3.6, and requiring the following packages, which are available via
 * Required: [matplotlib >= 2.2.2](https://matplotlib.org/)
 * Required: [torch >= 1.3.1](https://pytorch.org/)
 * Required: [transformers >= 2.2.2](https://huggingface.co/transformers/)
+* Required: FastText model trained with Wikipedia 300-dimension (https://fasttext.cc/docs/en/pretrained-vectors.html)
 
 
 ### Basic Usage
 
-To perform active learning for text labellling, the input corpus of documents should consist of plain text files stored in csv format (one corpus two files, one for documents belong to class A and one for documents for class B), each row corresponding to one document in that corpus and the column of text should be named "text", the format can be refered to the csv file in the directory "corpus_data/ProtonPumpInhibitors/".
+To perform active learning for text labellling, the input corpus of documents should consist of plain text files stored in csv format (two files for one corpus, one for documents belong to class A and one for documents for class B), each row corresponding to one document in that corpus, the format can be refered to the csv file in the sample directory "corpus_data/ProtonPumpInhibitors/".
 
-##### Step 1: Train LDA model
+##### Step 1: Encoding Text
 
-The first step of TBCC is train sevearl LDA models based on the data located in directory "data/" with different values of k(number of topics in model).  
+The first step of the system is converting raw text data into vectorized format, the raw text data located in directory "corpus_data/", each dataset should have its individual directory, for example, the "ProtonPumpInhibitors" under folder "corpus_data".  The input corpus of documents should consist of plain text files stored in csv format (two files for one corpus, one for documents belong to class A and one for documents for class B), each row corresponding to one document in that corpus, the format can be refered to the csv file in the sample directory "corpus_data/ProtonPumpInhibitors/". Then we can start convert the text into vectors:
 
-	python build_lda_model.py 5 10 20 40 80 160 200
+	python encoding_text.py 0 1 2 3 4 -i ProtonPumpInhibitors
 
+The numbers specify the representation techniques used, 0-tf, 1-tfidf, 2-word2vec, 3-glove, 4-fasttext. -i specify the folder you save the raw input data.
 It should be noted that you must specify at least one k, or you can input a list of k (*5 10 15 20 25 30*) as shown in above command. There are some other opitons you can specify such as output directory (default is directory "LDA_MODELS/"), random seed (default is 1984) and so on, as shown below
 	
 	python build_lda_model.py --random_state=2020 5 10 20 40 80 160 200
