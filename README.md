@@ -30,7 +30,7 @@ If you want to convert text into embeddings by transformer-based model:
 
 	python encoding_text_transformer.py 0 1 2 3 4 5 -i ProtonPumpInhibitors
 	
-The numbers specify the representation techniques used, 0-bert, 1-gpt2, 2-xlnet, 3-distilbert, 4-albert, 5-roberta and -i specify the folder you save the raw input data.
+The numbers specify the representation techniques used, 0-bert, 1-gpt2, 2-xlnet, 3-distilbert, 4-albert, 5-roberta and -i specify the folder you save the raw input data. It should be noted, for each corpus, this script will generate two sort of representation, one is averaged embeddings, another is "[CLS]" token embeddings which is suffixed by "cls.csv".
 
 ##### Step 2: Active Learning
 
@@ -40,3 +40,7 @@ We can start active learning procedure by:
 
 The number indicates the selection methods 0-random, 1-uncertainty, 2-certainty, 3-certainty-informationGain, 4-EGAL, 5-QBC, 6-InformationDensity, -t specify the text representation, options are w2v, glove, fasttext, tf, tfidf, bert, roberta-base, disilbert-base-uncased, gpt2, xlnet-base-cased, albert-base-v2. 
 -m specify the max number of instances labelled, -r means the number of repetition with different random seed, -n, -p indicates the encoded input from different classes. Other arguments like number of documents labelled per iteration, number of estimators for QBC can be found by --help or -h.
+
+##### Step 3: Experimental Results
+
+![alt text](https://github.com/GeorgeLuImmortal/Effectiveness-of-Pretrained-Transformer-based-Language-Models-in-Active-Learning-for-Labelling-Data/blob/master/plots/pretrained_Longer_MultidomainCustomerReview_uncertainty.pdf)
