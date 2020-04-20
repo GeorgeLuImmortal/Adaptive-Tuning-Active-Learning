@@ -43,4 +43,4 @@ The number indicates the selection methods 0-random, 1-uncertainty, 2-certainty,
 
 ##### Step 3: Experimental Results
 
-![alt text](https://github.com/GeorgeLuImmortal/Effectiveness-of-Pretrained-Transformer-based-Language-Models-in-Active-Learning-for-Labelling-Data/blob/master/plots/pretrained_Longer_MultidomainCustomerReview_uncertainty.pdf)
+![alt text](https://github.com/GeorgeLuImmortal/Effectiveness-of-Pretrained-Transformer-based-Language-Models-in-Active-Learning-for-Labelling-Data/blob/master/plots/pretrained_Longer_MultidomainCustomerReview_uncertainty.png)
