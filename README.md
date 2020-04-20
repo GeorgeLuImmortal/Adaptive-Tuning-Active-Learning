@@ -16,7 +16,7 @@ Tested Python 3.6, and requiring the following packages, which are available via
 
 ### Basic Usage
 
-To perform topic-based corpus comparison, the input corpus of documents should consist of plain text files stored in csv format (one corpus per file), each row corresponding to one document in that corpus and the column of text should be named "text", the format can be refered to the csv file in the directory "data/" (please ignore the column "label", it is used for document classification experiments). We assume your text data is preprocesed. Our code does not include the preprocessing component so that you can customize your own preprocessing strategy.
+To perform active learning for text labellling, the input corpus of documents should consist of plain text files stored in csv format (one corpus two files, one for documents belong to class A and one for documents for class B), each row corresponding to one document in that corpus and the column of text should be named "text", the format can be refered to the csv file in the directory "corpus_data/ProtonPumpInhibitors/".
 
 ##### Step 1: Train LDA model
 
