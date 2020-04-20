@@ -12,7 +12,7 @@ Tested Python 3.6, and requiring the following packages, which are available via
 * Required: [matplotlib >= 2.2.2](https://matplotlib.org/)
 * Required: [torch >= 1.3.1](https://pytorch.org/)
 * Required: [transformers >= 2.2.2](https://huggingface.co/transformers/)
-* Required: FastText model trained with Wikipedia 300-dimension (https://fasttext.cc/docs/en/pretrained-vectors.html)
+* Required: [FastText model trained with Wikipedia 300-dimension](https://fasttext.cc/docs/en/pretrained-vectors.html)
 
 
 ### Basic Usage
