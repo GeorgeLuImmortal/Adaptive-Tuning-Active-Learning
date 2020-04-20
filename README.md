@@ -36,4 +36,6 @@ The numbers specify the representation techniques used, 0-bert, 1-gpt2, 2-xlnet,
 
 We can start active learning procedure by:
 
-	ACC_PRE_YIELD_BURDEN_active_learning.py 0 1 2 3 4 5 -t bert -m 1000 -r 10 -n ProtonPumpInhibitors_neg.csv -p ProtonPumpInhibitors_pos.csv
+	ACC_PRE_YIELD_BURDEN_active_learning.py 0 1 2 3 4 5 -t roberta-base -m 1000 -r 10 -n ProtonPumpInhibitors_neg.csv -p ProtonPumpInhibitors_pos.csv
+
+The number indicates the selection methods 0-random, 1-uncertainty, 2-certainty, 3-certainty-informationGain, 4-EGAL, 5-QBC, 6-InformationDensity, -t specify the text representation, options are bert, roberta-base,  
