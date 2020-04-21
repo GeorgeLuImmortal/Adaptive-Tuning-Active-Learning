@@ -1,6 +1,8 @@
 # Effectiveness-of-Pretrained-Transformer-based-Language-Models-in-Active-Learning-for-Labelling-Data
 Investigating the Effectiveness of Representations Based on Pretrained Transformer-based Language Models in Active Learning for Labelling Text Datasets
 
+This repository is temporarily associated with paper [Lu, J., Henchion, M. and Mac Namee, B., 2019. Investigating the Effectiveness of Word-Embedding Based Active Learning for Labelling Text Datasets. arXiv preprint arXiv:1910.03505.](https://arxiv.org/abs/1910.03505)
+
 
 ### Dependencies
 Tested Python 3.6, and requiring the following packages, which are available via PIP:
@@ -41,8 +43,11 @@ We can start active learning procedure by:
 The number indicates the selection methods 0-random, 1-uncertainty, 2-certainty, 3-certainty-informationGain, 4-EGAL, 5-QBC, 6-InformationDensity, -t specify the text representation, options are w2v, glove, fasttext, tf, tfidf, bert, roberta-base, disilbert-base-uncased, gpt2, xlnet-base-cased, albert-base-v2. 
 -m specify the max number of instances labelled, -r means the number of repetition with different random seed, -n, -p indicates the encoded input from different classes. Other arguments like number of documents labelled per iteration, number of estimators for QBC can be found by --help or -h.
 
-##### Step 3: Experimental Results
+##### Step 3: Transformer-based Models VS Other Representations
 
-We investigate the impact of different representations in active learning, we compare some popular pretrained transformer-based models such as Bert, Roberta with some classicial techniques such as tfidf, word2vec. We apply different selection methods in active learning to mitigate the potential impacts caused by selection method. The following picture visualize the performance of different representations in Multi-Domain Customer Review dataset using uncertainty method, the horizontal axis is the number of documents labelled and vertical axis is accuracy score.
+We investigate the impact of different representations in active learning, we compare some popular pretrained transformer-based models such as Bert, Roberta with some classicial techniques such as tfidf, word2vec. We apply different selection methods in active learning to mitigate the potential impacts caused by selection method. The following picture visualize the performance of different representations in Multi-Domain Customer Review dataset using uncertainty method, the horizontal axis is the number of documents labelled and vertical axis is accuracy score. The results of other datasets with different selection method can be seen in the plots directory.
 
 ![alt text](https://github.com/GeorgeLuImmortal/Effectiveness-of-Pretrained-Transformer-based-Language-Models-in-Active-Learning-for-Labelling-Data/blob/master/plots/pretrained_Longer_MultidomainCustomerReview_uncertainty.png)
+
+
+##### Step 4: [CLS] Token Representation VS Aggregated Representations
