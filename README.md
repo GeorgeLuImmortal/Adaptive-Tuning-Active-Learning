@@ -45,9 +45,15 @@ The number indicates the selection methods 0-random, 1-uncertainty, 2-certainty,
 
 ##### Step 3: Transformer-based Models VS Other Representations
 
-We investigate the impact of different representations in active learning, we compare some popular pretrained transformer-based models such as Bert, Roberta with some classicial techniques such as tfidf, word2vec. We apply different selection methods in active learning to mitigate the potential impacts caused by selection method. The following picture visualize the performance of different representations in Multi-Domain Customer Review dataset using uncertainty method, the horizontal axis is the number of documents labelled and vertical axis is accuracy score. The results of other datasets with different selection method can be seen in the plots directory.
+We investigate the impact of different representations in active learning, we compare some popular pretrained transformer-based models such as BERT, Roberta with some classicial techniques such as tfidf, word2vec. We apply different selection methods in active learning to mitigate the potential impacts caused by selection method. The following picture visualize the performance of different representations in Multi-Domain Customer Review dataset using uncertainty method, the horizontal axis is the number of documents labelled and vertical axis is accuracy score. The results of other datasets with different selection method can be seen in the plots directory.
 
 ![alt text](https://github.com/GeorgeLuImmortal/Effectiveness-of-Pretrained-Transformer-based-Language-Models-in-Active-Learning-for-Labelling-Data/blob/master/plots/pretrained_Longer_MultidomainCustomerReview_uncertainty.png)
 
 
 ##### Step 4: [CLS] Token Representation VS Aggregated Representations
+
+Among pretrained transformer-based models, BERT and its variants have been shown the most effective techniques in active learning for labelling dataset, hence we compare the performance of some popular BERT-like models. Also, we investigate the difference between "[CLS]" token representation and aggregated representation. One result of dataset Multi-domain Customer Review is shown below:
+
+![alt text](https://github.com/GeorgeLuImmortal/Effectiveness-of-Pretrained-Transformer-based-Language-Models-in-Active-Learning-for-Labelling-Data/blob/master/plots/pretrained_Longer_MultidomainCustomerReview_uncertainty_cls.png)
+
+The results of other datasets can be found in the plots directory.
