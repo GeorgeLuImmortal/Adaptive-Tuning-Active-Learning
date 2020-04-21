@@ -43,6 +43,6 @@ The number indicates the selection methods 0-random, 1-uncertainty, 2-certainty,
 
 ##### Step 3: Experimental Results
 
-We investigate the impact of different representations in active learning, we compare some popular pretrained transformer-based models such as Bert, Roberta with some classicial techniques such as tfidf, word2vec. We apply different selection methods in active learning to mitigate the potential impacts caused by selection method. The following picture visualize the performance of different representations in Multi-Domain Customer Review dataset, 
+We investigate the impact of different representations in active learning, we compare some popular pretrained transformer-based models such as Bert, Roberta with some classicial techniques such as tfidf, word2vec. We apply different selection methods in active learning to mitigate the potential impacts caused by selection method. The following picture visualize the performance of different representations in Multi-Domain Customer Review dataset using uncertainty method, the horizontal axis is the number of documents labelled and vertical axis is accuracy score.
 
 ![alt text](https://github.com/GeorgeLuImmortal/Effectiveness-of-Pretrained-Transformer-based-Language-Models-in-Active-Learning-for-Labelling-Data/blob/master/plots/pretrained_Longer_MultidomainCustomerReview_uncertainty.png)
