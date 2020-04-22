@@ -36,13 +36,19 @@ The numbers specify the representation techniques used, 0-bert, 1-gpt2, 2-xlnet,
 
 ##### Step 2: Active Learning
 
-We can start active learning procedure by:
+We can start normal active learning procedure by:
 
 	ACC_PRE_YIELD_BURDEN_active_learning.py 0 1 2 3 4 5 -t roberta-base -m 1000 -r 10 -n ProtonPumpInhibitors_neg.csv -p ProtonPumpInhibitors_pos.csv
 
 The number indicates the selection methods 0-random, 1-uncertainty, 2-certainty, 3-certainty-informationGain, 4-EGAL, 5-QBC, 6-InformationDensity, -t specify the text representation, options are w2v, glove, fasttext, tf, tfidf, bert, roberta-base, disilbert-base-uncased, gpt2, xlnet-base-cased, albert-base-v2. 
 -m specify the max number of instances labelled, -r means the number of repetition with different random seed, -n, -p indicates the encoded input from different classes. Other arguments like number of documents labelled per iteration, number of estimators for QBC can be found by --help or -h.
 
-##### Step 3: Transformer-based Models VS Other Representations
+Or you can run Normal_active_learning.ipynb to conduct active learning procedure. By default, the results will be saved in the /results directory.
+
+##### Step 3: Adaptive Active Learning
+
+We can start run adaptive active learning procedure by runing Adaptive_active_learning.ipynb. By default, the results will be saved in the /results directory. Expecially there are three directories ./data, ./cache, ./outputs used for saving intermediate outputs of the procedure.
+
+##### Experimental results
 
 
