@@ -49,6 +49,8 @@ Or you can run Normal_active_learning.ipynb to conduct active learning procedure
 
 We can start run adaptive active learning procedure by runing Adaptive_active_learning.ipynb. By default, the results will be saved in the /results directory. Expecially there are three directories ./data, ./cache, ./outputs used for saving intermediate outputs of the procedure.
 
-##### Experimental results
+##### Step 4: Experiment results
+
+We investigate the impact of different representations in active learning, we compare some popular pretrained transformer-based models such as BERT, Roberta with some classicial techniques such as tfidf, word2vec. We apply different selection methods in active learning to mitigate the potential impacts caused by selection method. The following picture visualize the performance of different representations in Multi-Domain Customer Review dataset using uncertainty method, the horizontal axis is the number of documents labelled and vertical axis is accuracy score. The results of other datasets with different selection method can be seen in the plots directory.
 
 
