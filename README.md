@@ -53,4 +53,4 @@ We can start run adaptive active learning procedure by runing Adaptive_active_le
 
 We investigate the impact of different representations in active learning, we compare some popular pretrained transformer-based models such as BERT, Roberta with some classicial techniques such as tfidf, word2vec. We apply different selection methods in active learning to mitigate the potential impacts caused by selection method. The following picture visualize the performance of different representations in Multi-Domain Customer Review dataset using uncertainty method, the horizontal axis is the number of documents labelled and vertical axis is accuracy score. The results of other datasets with different selection method can be seen in the plots directory.
 
-
+![alt text](https://github.com/GeorgeLuImmortal/Adaptive-Tuning-Active-Learning/blob/master/plots/ATAL_Longer_MultidomainCustomerReview_uncertainty.png)
