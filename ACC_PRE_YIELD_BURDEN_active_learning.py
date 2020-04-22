@@ -37,7 +37,7 @@ def main():
     parser.add_option("-m","--max_required", action="store", type="int", dest="required_max", help="the max number of required samples for labelling", default=120)
     parser.add_option("-i","--initial_samples", action="store", type="int", dest="samples_init", help="the number of initial samples of each class for training ",default=5)
     parser.add_option("-K","--labelled_samples", action="store", type="int", dest="samples_label", help="the number of samples moved from pool to training set each iteration",default=10)
-    parser.add_option("-o","--outdir", action="store", type="string", dest="dir_out", help="output directory (default is result/ directory)", default='result/')
+    parser.add_option("-o","--outdir", action="store", type="string", dest="dir_out", help="output directory (default is results/ directory)", default='results/')
     parser.add_option("-r","--random_times", action="store", type="int", dest="randoms", help="the number of different independent runs", default=10)
     parser.add_option("-s","--start_random_state", action="store", type="int", dest="randoms_initial", help="the initial random state", default=1988)
     parser.add_option("-e","--num_of_estimators", action="store", type="int", dest="n_estimators", help="the number of estimators for QBC", default=5)
