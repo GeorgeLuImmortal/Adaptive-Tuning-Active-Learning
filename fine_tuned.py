@@ -43,7 +43,7 @@ import operator
 
 
 ## dataset for fine tuning
-dataset_name = 'Longer_MovieRevew'
+dataset_name = 'ProtonPumpInhibitors'
 args = {
     'data_dir': 'data/',
     'model_type':  'roberta',
