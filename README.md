@@ -1,4 +1,4 @@
-# Effectiveness-of-Pretrained-Transformer-based-Language-Models-in-Active-Learning-for-Labelling-Data
+# Adaptive Tuning Active Learning
 Investigating the Effectiveness of Representations Based on Pretrained Transformer-based Language Models in Active Learning for Labelling Text Datasets
 
 This repository is temporarily associated with paper [Lu, J., Henchion, M. and Mac Namee, B., 2019. Investigating the Effectiveness of Word-Embedding Based Active Learning for Labelling Text Datasets. arXiv preprint arXiv:1910.03505.](https://arxiv.org/abs/1910.03505)
@@ -43,11 +43,11 @@ We can start normal active learning procedure by:
 The number indicates the selection methods 0-random, 1-uncertainty, 2-certainty, 3-certainty-informationGain, 4-EGAL, 5-QBC, 6-InformationDensity, -t specify the text representation, options are w2v, glove, fasttext, tf, tfidf, bert, roberta-base, disilbert-base-uncased, gpt2, xlnet-base-cased, albert-base-v2. 
 -m specify the max number of instances labelled, -r means the number of repetition with different random seed, -n, -p indicates the encoded input from different classes. Other arguments like number of documents labelled per iteration, number of estimators for QBC can be found by --help or -h.
 
-Or you can run Normal_active_learning.ipynb to conduct active learning procedure. By default, the results will be saved in the /results directory.
+Or you can run **Normal_active_learning.ipynb** to conduct active learning procedure. By default, the results will be saved in the /results directory.
 
 ##### Step 3: Adaptive Tuning Active Learning
 
-We can start run adaptive active learning procedure by runing Adaptive_active_learning.ipynb. By default, the results will be saved in the /results directory. Expecially there are three directories ./data, ./cache, ./outputs used for saving intermediate outputs of the procedure.
+We can start run adaptive active learning procedure by running **Adaptive_active_learning.ipynb**. By default, the results will be saved in the /results directory. Expecially there are three directories ./data, ./cache, ./outputs used for saving intermediate outputs of the procedure.
 
 ##### Step 4: Experiment results
 
